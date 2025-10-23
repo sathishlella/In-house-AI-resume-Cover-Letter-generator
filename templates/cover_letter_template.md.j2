@@ -1,0 +1,17 @@
+{{ today }}
+{{ company.name }}
+{{ company.address or "" }}
+
+Dear Hiring Manager,
+
+{{ intro }}
+
+{{ body_1 }}
+
+{{ body_2 }}
+
+{{ closing }}
+
+Sincerely,  
+{{ cand.name }}  
+{{ cand.email }} • {{ cand.phone }}{% if cand.linkedin %} • {{ cand.linkedin }}{% endif %}{% if cand.portfolio %} • {{ cand.portfolio }}{% endif %}

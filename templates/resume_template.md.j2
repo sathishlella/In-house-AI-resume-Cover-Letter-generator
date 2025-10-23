@@ -1,0 +1,34 @@
+# {{ summary.title if summary is defined and summary.title else cand.name }} – {{ cand.title }}
+**Location:** {{ cand.location }} • **Email:** {{ cand.email }} • **Phone:** {{ cand.phone }}{% if cand.linkedin %} • **LinkedIn:** {{ cand.linkedin }}{% endif %}{% if cand.portfolio %} • **Portfolio:** {{ cand.portfolio }}{% endif %}
+
+## Summary
+{{ summary.text if summary and summary.text else summary }}
+
+## Skills
+{{ skills if skills else cand.skills }}
+
+## Experience
+{% for sec in experience_sections %}
+**{{ sec.role }} – {{ sec.company }}**  ({{ sec.dates or "" }})
+{% for b in sec.bullets %}- {{ b }}
+{% endfor %}
+
+{% endfor %}
+
+{% if projects %}
+## Projects
+{% for p in projects %}
+**{{ p.name }}** — {{ p.blurb }}
+{% for b in p.bullets %}- {{ b }}
+{% endfor %}
+
+{% endfor %}
+{% endif %}
+
+## Education
+{{ education if education else cand.education }}
+
+{% if extras %}
+## Additional
+{{ extras }}
+{% endif %}
