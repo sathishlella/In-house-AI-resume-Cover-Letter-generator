@@ -7,6 +7,12 @@
 This app generates a tailored resume and cover letter from your inputs and a target job description.
 It uses modular prompt templates and lets you export polished DOCX files.
 
+## 🔴 Live Demo
+https://in-house-ai-resume-cover-letter-grok.streamlit.app/
+[![Dashboard preview](dashboard.png)](https://in-house-ai-resume-cover-letter-grok.streamlit.app/)
+click image to open live demo
+
+
 ## Features
 - Guided form for candidate profile and target job description
 - Optional upload of existing resume text to enrich outputs
